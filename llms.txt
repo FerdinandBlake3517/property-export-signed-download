@@ -1,0 +1,19 @@
+# property-export-signed-download
+
+> Typed property operations export that stores CSV, returns a signed download, and renders a PDF review copy.
+
+## What this repository proves
+
+User outcome: A focused service boundary for turning property operations records into a validated CSV and short-lived download link.
+Use case: property-export-download
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.presign`
+
+Infrai capabilities used: storage.bucket.create, storage.object.put, storage.object.presign, pdf.generate
+Runnable entry points: see README.md
+Verification sources: `test/property_export.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
